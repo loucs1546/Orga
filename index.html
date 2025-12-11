@@ -566,7 +566,14 @@
       .hierarchy-container { height: auto !important; padding: 2rem 0 !important; }
       .hierarchy-node { font-size: 0.9rem !important; padding: 0.6rem !important; min-width: 100px; }
       .zentys-logo { font-size: 1.8rem !important; }
-      .grades-grid, .role-column, .immat-full-grid, .vehicles-grid { grid-template-columns: 1fr !important; gap: 1.2rem !important; }
+      .grades-grid, .role-column, .immat-full-grid, 
+      .vehicles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2.2rem;
+        margin-top: 2.5rem;
+        justify-content: center;
+      }
       .tenues-container { flex-direction: column !important; align-items: center !important; gap: 2rem !important; }
       .tenue-column { max-width: 100% !important; padding: 0 1rem; }
       .vehicle-card img { height: 100px !important; }
@@ -1381,5 +1388,6 @@
   </script>
 </body>
 </html>
+
 
 
