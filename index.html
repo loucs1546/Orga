@@ -747,34 +747,48 @@
       </p>
     </section>
     <!-- HIÉRARCHIE -->
+    <!-- HIÉRARCHIE -->
     <section id="hierarchy">
       <h2>HIÉRARCHIE</h2>
       <div class="hierarchy-container">
-        <svg class="hierarchy-svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" width="100%" height="100%">
-          <defs>
-            <filter id="electric-glow">
-              <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
-              <feSpecularLighting in="blur" surfaceScale="5" specularConstant="0.75" specularExponent="20" lighting-color="#00ffff" result="specOut">
-                <fePointLight x="250" y="250" z="200"/>
-              </feSpecularLighting>
-              <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
-              <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
-            </filter>
-          </defs>
-          <line x1="125" y1="70" x2="375" y2="70" class="electric-line" />
-          <line x1="125" y1="70" x2="75" y2="195" class="electric-line" />
-          <line x1="375" y1="70" x2="425" y2="195" class="electric-line" />
-          <line x1="75" y1="195" x2="125" y2="420" class="electric-line" />
-          <line x1="425" y1="195" x2="375" y2="420" class="electric-line" />
-          <line x1="125" y1="420" x2="375" y2="420" class="electric-line" />
-        </svg>
-        <div class="hierarchy-node leader node-glow">Leader</div>
-        <div class="hierarchy-node co-leader node-glow">Co-Leader</div>
-        <div class="hierarchy-node frere-darme node-glow">Frère D'arme</div>
-        <div class="hierarchy-node braqueur node-glow">Braqueur</div>
-        <div class="hierarchy-node tueur node-glow">Tueur</div>
-        <div class="hierarchy-node p-dessai node-glow">P. D'essaie</div>
-        <div class="zentys-logo">Onyx Wolves</div>
+        <!-- Version desktop : graphique -->
+        <div class="hierarchy-desktop">
+          <svg class="hierarchy-svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" width="100%" height="100%">
+            <defs>
+              <filter id="electric-glow">
+                <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+                <feSpecularLighting in="blur" surfaceScale="5" specularConstant="0.75" specularExponent="20" lighting-color="#00ffff" result="specOut">
+                  <fePointLight x="250" y="250" z="200"/>
+                </feSpecularLighting>
+                <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+                <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+              </filter>
+            </defs>
+            <line x1="125" y1="70" x2="375" y2="70" class="electric-line" />
+            <line x1="125" y1="70" x2="75" y2="195" class="electric-line" />
+            <line x1="375" y1="70" x2="425" y2="195" class="electric-line" />
+            <line x1="75" y1="195" x2="125" y2="420" class="electric-line" />
+            <line x1="425" y1="195" x2="375" y2="420" class="electric-line" />
+            <line x1="125" y1="420" x2="375" y2="420" class="electric-line" />
+          </svg>
+          <div class="hierarchy-node leader node-glow">Leader</div>
+          <div class="hierarchy-node co-leader node-glow">Co-Leader</div>
+          <div class="hierarchy-node frere-darme node-glow">Frère D'arme</div>
+          <div class="hierarchy-node braqueur node-glow">Braqueur</div>
+          <div class="hierarchy-node tueur node-glow">Tueur</div>
+          <div class="hierarchy-node p-dessai node-glow">P. D'essaie</div>
+          <div class="zentys-logo">Onyx Wolves</div>
+        </div>
+
+        <!-- Version mobile : liste verticale -->
+        <div class="hierarchy-mobile">
+          <div class="hierarchy-item leader">👑 Leader</div>
+          <div class="hierarchy-item co-leader">⚔️ Co-Leader</div>
+          <div class="hierarchy-item frere-darme">🛡️ Frère D'arme</div>
+          <div class="hierarchy-item braqueur">🧨 Braqueur</div>
+          <div class="hierarchy-item tueur">💀 Tueur</div>
+          <div class="hierarchy-item p-dessai">🧪 P. D'essaie</div>
+        </div>
       </div>
     </section>
     <!-- GRADES -->
@@ -784,22 +798,22 @@
         <div class="grade-item">
           <div class="grade-title">LEADER</div>
           <div class="members-list">
-            <div class="member-item"><span class="immat-badge">02</span> Membre</div>
-            <div class="member-item"><span class="immat-badge">16</span> Membre</div>
+            <div class="member-item"><span class="immat-badge">02</span> Lily Kashi</div>
+            <div class="member-item"><span class="immat-badge">16</span> Mathieu Driven</div>
           </div>
         </div>
         <div class="grade-item">
           <div class="grade-title">CO-LEAD</div>
           <div class="members-list">
             <div class="member-item">
-              <span class="immat-badge">16</span> Membre
+              <span class="immat-badge">16</span> Mathieu Driven
             </div>
           </div>
         </div>
         <div class="grade-item">
           <div class="grade-title">FRÈRE D'ARME</div>
           <div class="members-list">
-            <div class="member-item"><span class="immat-badge">03</span> Membre</div>
+            <div class="member-item"><span class="immat-badge">03</span> Ziko Kashi</div>
           </div>
         </div>
         <div class="grade-item">
@@ -824,39 +838,39 @@
           <div class="role-item">
             <div class="role-title">Conducteur</div>
             <div class="role-details">
-              <span class="immat-badge">16</span> Membre<br>
-              <span class="immat-badge">03</span> Membre
+              <span class="immat-badge">16</span> Mathieu Driven<br>
+              <span class="immat-badge">03</span> Ziko Kashi
             </div>
           </div>
           <div class="role-item">
             <div class="role-title">Braquage</div>
             <div class="role-details">
-              <span class="immat-badge">16</span> Membre
+              <span class="immat-badge">16</span> Mathieu Driven
             </div>
           </div>
           <div class="role-item">
             <div class="role-title">Otage</div>
             <div class="role-details">
-              <span class="immat-badge">02</span> Membre<br>
+              <span class="immat-badge">02</span> Lily Kashi<br>
             </div>
           </div>
           <div class="role-item">
             <div class="role-title">Gérant Illégal</div>
             <div class="role-details">
-              <span class="immat-badge">16</span> Membre<br>
+              <span class="immat-badge">16</span> Mathieu Driven<br>
             </div>
           </div>
           <div class="role-item">
             <div class="role-title">Gérant Support</div>
             <div class="role-details">
-              <span class="immat-badge">02</span> Membre<br>
+              <span class="immat-badge">02</span> Lily Kashi<br>
             </div>
           </div>
           <div class="role-item">
             <div class="role-title">Gérant OP</div>
             <div class="role-details">
-              <span class="immat-badge">02</span> Membre<br>
-              <span class="immat-badge">16</span> Membre
+              <span class="immat-badge">02</span> Lily Kashi<br>
+              <span class="immat-badge">16</span> Mathieu Driven
             </div>
           </div>
         </div>
@@ -868,13 +882,13 @@
       <div class="immat-full-section">
         <div class="immat-full-grid">
           <div class="immat-full-item">
-            <div class="immat-full-header">16 — Membre</div>
+            <div class="immat-full-header">16 — Mathieu Driven</div>
           </div>
           <div class="immat-full-item">
-            <div class="immat-full-header">02 — Membre</div>
+            <div class="immat-full-header">02 — Lily Kashi</div>
           </div>
           <div class="immat-full-item">
-            <div class="immat-full-header">03 — Membre</div>
+            <div class="immat-full-header">03 — Ziko Kashi</div>
           </div>
         </div>
       </div>
@@ -908,11 +922,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">174</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -921,11 +935,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">1</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -934,11 +948,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">81</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -947,11 +961,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">15</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -960,11 +974,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">28</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">8</span>
               </div>
             </div>
           </div>
@@ -973,11 +987,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">121</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -986,11 +1000,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">5</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -999,11 +1013,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">55</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -1012,11 +1026,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">8</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -1025,11 +1039,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">273</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">10</span>
               </div>
             </div>
           </div>
@@ -1038,11 +1052,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">25</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">4</span>
               </div>
             </div>
             <div class="tenue-note">Personalisable selon vos goûts (il est obligatoire de rester dans le même thème)</div>
@@ -1052,11 +1066,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">-1</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -1065,11 +1079,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">30</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
             <div class="tenue-note">Personalisable selon vos goûts (il est obligatoire de rester dans le même thème)</div>
@@ -1079,11 +1093,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
             <div class="tenue-note">Personalisable selon vos goûts (il est obligatoire de rester dans le même thème)</div>
@@ -1096,11 +1110,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">169</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -1109,11 +1123,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">2</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -1122,11 +1136,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">338</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">1</span>
               </div>
             </div>
           </div>
@@ -1135,11 +1149,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">207</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -1148,11 +1162,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -1161,11 +1175,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">84</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -1174,11 +1188,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">59</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -1187,11 +1201,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">149</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">1</span>
               </div>
             </div>
           </div>
@@ -1200,11 +1214,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">27</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
           </div>
@@ -1213,11 +1227,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">-1</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">-1</span>
               </div>
             </div>
           </div>
@@ -1226,11 +1240,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">6</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
             <div class="tenue-note">Personalisable selon vos goûts (il est obligatoire de rester dans le même thème)</div>
@@ -1240,11 +1254,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">-1</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">-1</span>
               </div>
             </div>
           </div>
@@ -1253,11 +1267,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">4</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">1</span>
               </div>
             </div>
             <div class="tenue-note">Personalisable selon vos goûts (il est obligatoire de rester dans le même thème)</div>
@@ -1267,11 +1281,11 @@
             <div class="tenue-item">
               <div class="tenue-info">
                 <span class="tenue-label">Numéro :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">16</span>
               </div>
               <div class="tenue-info">
                 <span class="tenue-label">Variante :</span>
-                <span class="tenue-value">XXX</span>
+                <span class="tenue-value">0</span>
               </div>
             </div>
             <div class="tenue-note">Personalisable selon vos goûts (il est obligatoire de rester dans le même thème)</div>
@@ -1296,57 +1310,7 @@
 
   <!-- ✅ SCRIPT PRINCIPAL CORRIGÉ -->
   <script>
-
     document.addEventListener('DOMContentLoaded', function () {
-
-      // inline dossier login elements (may or may not exist depending on HTML)
-      const dossierLogin = document.getElementById('dossier-login');
-      const dossierLoginUser = document.getElementById('dossier-login-user');
-      const dossierLoginPass = document.getElementById('dossier-login-pass');
-      const dossierLoginSubmit = document.getElementById('dossier-login-submit');
-      const dossierLoginCancel = document.getElementById('dossier-login-cancel');
-      const dossierLoginError = document.getElementById('dossier-login-error');0
-      const dossierListWrapper = document.getElementById('dossier-list');
-
-      // global login modal will be injected only if inline dossier login is not present
-      function injectGlobalLoginIfNeeded() {
-        if (document.getElementById('dossier-login')) return; // inline present -> no global needed
-        if (document.getElementById('login-modal')) return; // already injected
-        const html = `
-          <div id="login-modal" aria-hidden="true" style="display:none; position:fixed; inset:0; z-index:12000; justify-content:center; align-items:center; background:rgba(0,0,0,0.6);">
-            <div class="login-card" role="dialog" aria-modal="true" style="width:340px; background:#0f0f10; border:2px solid rgba(0,255,255,0.95); padding:20px; border-radius:12px; color:#fff; position:relative;">
-              <div class="close-x" id="login-close" title="Fermer" style="position:absolute; right:10px; top:8px; cursor:pointer; font-size:18px; color:#fff;">&times;</div>
-              <h3 style="text-align:center; color:#00ffff; margin-bottom:12px;">Connexion — Dossier</h3>
-              <label for="login-user" style="display:block; margin-top:8px; color:#cfcfcf; font-weight:600;">Utilisateur</label>
-              <input id="login-user" type="text" placeholder="Votre pseudo" autocomplete="username" style="width:100%; padding:10px; margin-top:6px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:#151515; color:#fff;" />
-              <label for="login-pass" style="display:block; margin-top:8px; color:#cfcfcf; font-weight:600;">Mot de passe</label>
-              <input id="login-pass" type="password" placeholder="Mot de passe" autocomplete="current-password" style="width:100%; padding:10px; margin-top:6px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:#151515; color:#fff;" />
-              <div class="login-actions" style="display:flex; gap:10px; margin-top:12px; justify-content:space-between; align-items:center;">
-                <button class="cancel-btn" id="login-cancel" style="background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.08); padding:8px 12px; border-radius:8px; cursor:pointer;">Annuler</button>
-                <button class="login-btn" id="login-submit" style="background:#00ffff; color:#000; border:none; padding:9px 14px; border-radius:8px; font-weight:700; cursor:pointer;">Se connecter</button>
-              </div>
-              <div class="login-error" id="login-error" style="color:#ff9999; margin-top:8px; font-size:0.9rem; display:none;"></div>
-            </div>
-          </div>
-        `;
-        const wrapper = document.createElement('div');
-        wrapper.innerHTML = html;
-        document.body.appendChild(wrapper.firstElementChild);
-        // attach handlers
-        document.getElementById('login-close').addEventListener('click', () => {
-          const modal = document.getElementById('login-modal'); if (modal) modal.style.display = 'none';
-        });
-        document.getElementById('login-cancel').addEventListener('click', () => {
-          const modal = document.getElementById('login-modal'); if (modal) modal.style.display = 'none';
-        });
-        document.getElementById('login-submit').addEventListener('click', async (e) => {
-          e.preventDefault();
-          await handleGlobalLoginSubmit();
-        });
-        document.getElementById('login-pass').addEventListener('keydown', function(ev){
-          if (ev.key === 'Enter') handleGlobalLoginSubmit();
-        });
-      }
 
       // If inline not present, ensure global is available for fallback
       injectGlobalLoginIfNeeded();
@@ -1421,54 +1385,6 @@
           return { ok:false, message: err.message || 'Erreur réseau' };
         }
       }
-
-      async function handleGlobalLoginSubmit() {
-        const userInput = document.getElementById('login-user');
-        const passInput = document.getElementById('login-pass');
-        const errEl = document.getElementById('login-error');
-        if (!userInput || !passInput || !errEl) return;
-        const username = userInput.value.trim();
-        const password = passInput.value;
-        if (!username || !password) {
-          errEl.textContent = 'Merci de renseigner utilisateur et mot de passe.';
-          errEl.style.display = 'block';
-          return;
-        }
-        errEl.style.display = 'none';
-        const btn = document.getElementById('login-submit');
-        btn.disabled = true;
-        btn.textContent = 'Connexion...';
-        const res = await authenticateUser(username, password);
-        btn.disabled = false;
-        btn.textContent = 'Se connecter';
-        if (!res.ok) {
-          errEl.textContent = res.message || 'Erreur d\'authentification';
-          errEl.style.display = 'block';
-          return;
-        }
-
-      // === INLINE AUTH (if dossier-login exists inside modal) ===
-      async function authenticateInline(username, password) {
-        if (!supabase) return { ok:false, message:'Supabase non initialisé' };
-        try {
-          const cleaned = String(username || '').trim();
-          const res = await supabase
-            .from('Compte')
-            .select('id, user, password')
-            .ilike('user', cleaned)
-            .limit(1)
-            .maybeSingle();
-          if (res && res.error) return { ok:false, message: res.error.message || 'Erreur lecture Compte' };
-          if (!res || !res.data) return { ok:false, message:'Utilisateur introuvable' };
-          const row = res.data;
-          if (String(row.password) === String(password)) return { ok:true, user:{ id: row.id, user: row.user } };
-          return { ok:false, message:'Mot de passe invalide' };
-        } catch (err) {
-          console.error('authenticateInline exception:', err);
-          return { ok:false, message: err.message || 'Erreur réseau' };
-        }
-      }
-      
       function showGlobalLoginModal(message) {
         const modal = document.getElementById('login-modal');
         if (!modal) { injectGlobalLoginIfNeeded(); }
@@ -1480,12 +1396,9 @@
           if (err) { err.textContent = message; err.style.display = 'block'; }
         }
       }
+
+
     });
   </script>
 </body>
 </html>
-
-
-
-
-
